@@ -1,0 +1,15 @@
+zad1
+
+1.Metodą &&, operatorem trójargumentowym (? :) oraz instrukcją if / switch.
+
+2.Ponieważ wyrażenie 0 && <Element /> zwraca w JavaScript liczbę 0. React pomija renderowanie wartości logicznych (false), ale liczbę 0 traktuje jako tekst i wyświetla ją na ekranie.
+
+3.Zamieniając warunek na prawdziwą wartość logiczną za pomocą podwójnego zaprzeczenia {!!count && <Element />} lub porównania {count > 0 && <Element />}.
+
+zad2
+
+1.Wyświetli się tylko jeden element: <span className="badge–out">Brak w magazynie</span>. Warunek dla niskiego stanu jest fałszywy, a discount wynosi null, więc nic więcej się nie wyrenderuje.
+
+2.Wyświetlą się dwa elementy: <span className="badge–low">Ostatnie sztuki</span> oraz <span className="badge–sale">–20%</span>. Oba warunki są spełnione (ilość mieści się w przedziale 1-4, a zniżka istnieje).
+
+3.Nie wyświetli się absolutnie nic, a na ekranie pojawi się pusty kontener <div className="badges"></div>. Stan magazynowy jest za wysoki, a brak zniżki (undefined) nie renderuje żadnego elementu.
